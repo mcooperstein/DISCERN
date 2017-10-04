@@ -1,0 +1,379 @@
+<div id="servicesNav" class="mainNav col-xs-12">
+
+    <div class="searchNav col-md-5 col-lg-4">
+        <a ng-href="#/home" class="img-a"><img class="img-nav" src="images/discernLogo.png" /></a>
+        <input id="main-search2" type="text" class="form-control" placeholder="Global Search">
+        <button id="submit2"><i class="fa fa-search"></i></button>
+    </div>
+    <div class="navLinks col-md-6 col-lg-7">
+        <div class="col-xs-2 navLinkDivs">
+            <a ng-href="#/overview">
+                <p class="navText">OVERVIEW</p>
+            </a>
+        </div>
+        <div class="col-xs-2 navLinkDivs">
+            <a href="#/customers">
+                <p class="navText">CUSTOMERS</p>
+            </a>
+        </div>
+        <div class="col-xs-2 navLinkDivs">
+            <a ng-href="#/partners">
+                <p class="navText">PARTNERS</p>
+            </a>
+        </div>
+        <div class="col-xs-2 navLinkDivs">
+            <a href="#/news">
+                <p class="navText">NEWS</p>
+            </a>
+        </div>
+        <div class="col-xs-2 navLinkDivs">
+            <a href="#/about">
+                <p class="navText activetab">ABOUT</p>
+            </a>
+        </div>
+        <div class="col-xs-2 navLinkDivs">
+            <a href="#/contact">
+                <p class="navText">CONTACT US</p>
+            </a>
+        </div>
+
+    </div>
+    <div class="col-xs-1">
+        <div class="col-xs-6"></div>
+        <div class="borderLogin col-xs-6">
+            <div id="break"></div>
+            <a id="lockA2" href="#"><span id="lock" class="fa fa-lock fa-lg" aria-hidden="true"></span>&nbsp;LOGIN</a>
+        </div>
+    </div>
+</div>
+
+<nav id="smallerNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="searchNav">
+                <a class="navbar-brand page-scroll" ng-href="#/home"><img class="img-nav" src="images/discernLogo.png" /></a>
+                <div class="navbar-collapse" id="global-search-desktop">
+                    <input id="main-search2" type="text" class="form-control" placeholder="Global Search">
+                    <button id="submit2"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div class="navbar-collapse" id="global-search-mobile">
+                        <input id="main-search2" type="text" class="form-control" placeholder="Global Search">
+                        <button id="submit2"><i class="fa fa-search"></i></button>
+                    </div>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#/overview">Overview</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#/customers">Customers</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#/partners">Partners</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#/news">News</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#/about">About</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#/contact">Contact Us</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#">Login</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<div id="pushContent"></div>
+<!-- pushing down site -->
+<!-- navbar code done -->
+
+<div id="about-page" ng-controller="about_controller">
+
+    <div id="bg-about">
+        <h1 class="teamH1" id="fade"><b>OUR TEAM</b></h1>
+    </div>
+    <div style="padding:50px;">
+        <h2 style="color:#116194; text-align:center; font-size:48px">Vision. Expertise. Execution.</h2>
+    </div>
+    <hr style="color:#474747; margin:0;">
+    <ul class="nav nav-tabs aboutpages nav-justified">
+        <li class="leader active"><a>Leadership / Tech Team</a></li>
+        <li class="sales"><a>Sales Team</a></li>
+        <li class="product"><a>Product Team</a></li>
+    </ul>
+
+    <div class="row" style="text-align: center; margin:0;">
+        <div class="col-sm-6 col-lg-3 leaderteam" id="0">
+            <div class="thumbnail">
+                <img src="images/Team_Members_Harry.png" class="img-circle">
+                <div class="caption">
+                    <h3>Harry Blount</h3>
+                    <p>Chairman & CEO</p>
+                    <a class="bioAs" ng-click="loadbio(0, 'leader', 'Harry Blount, co-founded DISCERN in 2016, following a 20+ year stint on Wall Street with major investment firms such as Lehman Brothers, Credit Suisse First Boston, Donaldson Lukfin & Jenrette and CIBC Oppenheimer.  While on Wall Street, Harry was named an All-American analyst in both Information Technology Hardware and Internet Infrastructure and a Wall Street Journal All-Star covering the Computer Hardware sector.   He is currently on the Board of Governors of the Commonwealth Club and previously was on the Board of The Tech Museum of Innovation in San Jose where he chaired the Futures Committee.  Harry also lent his expertise to a National Academy of Sciences study funded by the DoD and the Defense Intelligence Agency, where he was a principal author of a report entitled Persistent Forecasting of Disruptive Technologies.  Harry is a graduate of the University of Wisconsin -  La Crosse and is Chartered Financial Analyst.');">Read Bio</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 salesteam" id="1">
+            <div class="thumbnail">
+                <img src="images/Team_Members_Thor.png" class="img-circle">
+                <div class="caption">
+                    <h3>Thor Hauge</h3>
+                    <p>Head of Business Development</p>
+                    <a class="bioAs" ng-click="loadbio(4 , 'sales', 'Thor Hauge has a unique background with years of expertise in innovation commercialization, peer-to-peer, digital currencies, mobile payments and big data. Previously, Thor was a Global Business Development Executive with Western Union Digital Ventures and worked in Early Stage Venture Investments at Nokia Ventures.')">Read Bio</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 productteam" id="2">
+            <div class="thumbnail">
+                <img src="images/Team_Members_Jim.png" class="img-circle">
+                <div class="caption">
+                    <h3>Jim Christie</h3>
+                    <p>Head of Product</p>
+                    <a class="bioAs" ng-click="loadbio(6, 'product', 'Jim Christie brings 10+ years of product and business experience to DISCERN.  Prior to joining DISCERN, Jim has led business intelligence and advertising operations at Blinkx Video where he managed geographically distributed AdOps teams and exceeded revenue targets for the video business unit in six consecutive quarters.  Jim also served as the scrum master and team leader at Blinkx desktop where he he oversaw a 6 member content team, the overhaul of the firms product and created and maintained the product roadmap.  Prior to Blinkx, Jim was the operations specialist for Shoplocal where he oversaw 30 account relationships, and managed the data entry operations team.  Jim has a BS – Computer and Systems Engineering from Rensselear Polytechnic Institute')">Read Bio</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 leaderteam" id="3">
+            <div class="thumbnail">
+                <img src="images/Team_Members_Raghu.png" class="img-circle">
+                <div class="caption">
+                    <h3>Raghu Madabusi</h3>
+                    <p>CTO</p>
+                    <a class="bioAs" ng-click="loadbio(1, 'leader', 'Raghu Madabusi possess more than 20 years of design, development, and management experience in leading complex projects and high-caliber teams in USA, Germany and India. A Principal Technical Architect with strong business acumen and technical experience in Big Data, Cloud Computing & Traditional IT Projects. Raghu is PMP certified and holds close to dozen IT certifications. He has expertise in building complex Prototypes & Implementations in Big Data & Cloud that involve Machine Learning, Natural Language Processing, Graph Databases, Distributed Computing, Microservices, and more.')">Read Bio</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 leaderteam" id="4">
+            <div class="thumbnail">
+                <img src="images/Team_Members_Troy.png" class="img-circle">
+                <div class="caption">
+                    <h3>Troy Hansen</h3>
+                    <p>Data Integrity & Enhancement</p>
+                    <a class="bioAs" ng-click="loadbio(2, 'leader', 'Troy Hansen has 30+ years of experience as a Senior-level Quality Assurance executive. Prior to joining DISCERN, Troy worked for General Dynamics where he was responsible for communications testing on the last two major U.S. satellite constellations. Troy has also served in senior engineering positions for a variety of other firms including Xerox, Honeywell and Fischer Scientific. Troy is an avid options and commodity trader specializing in gold securities.')">Read Bio</a>
+                </div>
+            </div>
+        </div>
+        <div>
+
+        </div>
+        <div class="col-sm-6 salesteam" id="5">
+            <div class="thumbnail">
+                <img src="images/Team_Members_Mark.png" class="img-circle">
+                <div class="caption">
+                    <h3>Mark Herrmann</h3>
+                    <p>Data & Content Sales</p>
+                    <a class="bioAs" ng-click="loadbio(5, 'sales', 'Mark Herrmann has 18 years of institutional equity sales experience, including 9 as a Managing Director at Bear Stearns, covering the largest hedge funds and mutual funds on the west coast.  Over the past year, he has been working in a marketing and product development role for several alternative data companies.  Mark received an undergraduate degree in mechanical engineering from Rensselaer Polytechnic Institute and an MBA in finance from USC. He is based in San Francisco.')">Read Bio</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 productteam" id="6">
+            <div class="thumbnail">
+                <img src="images/Team_Members_Dave.png" class="img-circle">
+                <div class="caption">
+                    <h3>Dave Wigginton</h3>
+                    <p>Real Estate Curation</p>
+                    <a class="bioAs" ng-click="loadbio(7, 'product', 'David Wigginton has demonstrated a consistent ability to provide
+differentiated coverage of the real estate investment trust sector both as a
+Senior Analyst at Macquarie Capital and in the equity research department
+of Merrill Lynch. Prior to commencing his career in research, David worked
+as a Senior Consultant in the Financial Services Advisory area at Ernst &
+Young. He is a graduate of the University of Notre Dame, where he earned
+an M.S. in Accountancy, and Brigham Young University, where he earned a
+B.S. in Business Management with a finance emphasis.')">Read Bio</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 productteam" id="7">
+            <div class="thumbnail">
+                <img src="images/Team_Members_Richard.png" class="img-circle">
+                <div class="caption">
+                    <h3>Rick Church</h3>
+                    <p>Consumer Retail Curation</p>
+                    <a class="bioAs" ng-click="loadbio(8, 'product', 'Richard Church’s experience base includes 20+ years in equity
+investing in both public and private realms. His strengths revolve
+around strategy, financial advisory services, business valuation and
+global consumer/retail fundamental research. Richard’s background
+includes senior roles, such as Managing Director at Citi-Smith Barney;
+Managing Director at Shumway Capital Partners; and Principal/CIO at
+Quartern Capital Partners. Among Richard’s honors stand his
+distinction as a five-time winner of the Institutional Investor
+All-America Research Team award and the Wall Street Journal Best of
+the Street Award.')">Read Bio</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 productteam" id="8">
+            <div class="thumbnail">
+                <img src="images/Team_Members_Gil.png" class="img-circle">
+                <div class="caption">
+                    <h3>Gil Yang</h3>
+                    <p>Energy Curation</p>
+                    <a class="bioAs" ng-click="loadbio(9, 'product', 'Gil Yang brings a broad wealth of expertise to his role as energy anaylst, given his understanding of not only the financial analysis, but the science behind this sector. Prior to joining DISCERN. Gil was a senior analyst at Bank of Amercia Merrill Lynch covering Oil and Gas: SMID Cap U.S E&P, and at Citi Investment Research covering North Amercian E&P. Gills additional work includes coverage of Specialty Chemicals at Citi where he was ranked #3 in 2002, and coverage of SPecialty chemicals and Ag Biotech at JP Morgan Securities. Gill holds a BA from Cornell,an MBA in Finance from UCLA and a PHD in chemistry from the universty of California - Berkeley.')">Read Bio</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 leaderteam" id="9">
+            <div class="thumbnail">
+                <img src="images/Team_Members_Sanjay.png" class="img-circle">
+                <div class="caption">
+                    <h3>Sanjay Agarwal</h3>
+                    <p>Chief Data Scientist</p>
+                    <a class="bioAs" ng-click="loadbio(3, 'leader', 'Sanjay Agarwal has a broad wealth of experience in machine learning, data
+science, software engineering and visualization.
+Prior to joining DISCERN, led the data science effort in Petzilla where he
+deployed machine learning tools for logistic regression and real time
+geo-mapping. Sanjay was a lead data scientist at Qualcomm Analytics
+Research Group where he built cluster models (unsupervised learning) and
+linear models (GLM, Random Forests, Trees, and Classification). Sanjay
+also has held a number of principal engineer and manager roles at Cisco,
+Maxim, Microchip, Texas Instruments, and Philips. Sanjay has an MS in
+Electrical Engineering from UT-Austin and MBA from U of New Mexico
+and and Data Analytics certificate from the UC – Santa Cruz.')">Read Bio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="footer-contact">
+    <div class="container" style="margin: 0 auto; padding: 10px; padding-top: 40px; font-size: 20px;">
+        <div class="row" style="margin:0">
+            <div class="col-xs-7" style="margin: 0 auto;">
+                <img src="images/whiteLogo.png" id="footer-logo" />
+                <!--<br/>
+<br/>-->
+                <br/>
+                <div style="height: 50px; float: right;">
+                    <ul class="footer-ul" style="display: inline-block">
+                        <a href="#">
+                            <li style="list-style: none; color: #F7F7F7;">REGISTER</li>
+                        </a>
+                        <a href="#">
+                            <li style="list-style: none; color: #F7F7F7;">SEARCH</li>
+                        </a>
+                        <a href="#">
+                            <li style="list-style: none; color: #F7F7F7;">TOS</li>
+                        </a>
+                    </ul>
+                    <ul style="display: inline-block; list-style: none;">
+                        <a ng-href="#/overview">
+                            <li style="list-style: none; color: #c6c6c6;">OVERVIEW</li>
+                        </a>
+                        <a ng-href="#/customers">
+                            <li style="list-style: none; color: #c6c6c6;">CUSTOMERS</li>
+                        </a>
+                        <a ng-href="#/partners">
+                            <li style="list-style: none; color: #c6c6c6;">PARTNERS</li>
+                        </a>
+                    </ul>
+                    <ul style="display: inline-block; list-style: none;">
+                        <a ng-href="#/news">
+                            <li style="list-style: none; color: #c6c6c6;">NEWS</li>
+                        </a>
+                        <a ng-href="#/about">
+                            <li style="list-style: none; color: #c6c6c6">ABOUT US</li>
+                        </a>
+                        <a ng-href="#/contact">
+                            <li style="list-style: none; color: #c6c6c6;">CONTACT US</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-xs-5" style="color: #c6c6c6;">
+                <div class="col-sm-4" style="width: 100%; ">
+                    <br/>
+                    <div style="border-left: 1px solid #c6c6c6; height: 120px;">
+                        <div class="footer-icons">
+                            <div id="break"></div>
+                            <a href="">
+                                <span class="socicon-google ficon">
+                                </span>
+                            </a>
+                            <a href="">
+                                <span class="socicon-linkedin ficon">
+                                </span>
+                            </a>
+                            <a href="">
+                                <span class="socicon-twitter ficon"></span>
+                            </a>
+                        </div>
+                        <div style="margin-left: 30px;">
+                            <h3 style="font-size:16px;margin-top:10px;">PHONE:650.336.0222</h3>
+                            <h4 style="font-size:16px;">204 E 2ND AVENUE. #210 <br>San Mateo, CA 94401</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(".productteam").hide();
+    $(".salesteam").hide();
+    $(".product").click(function () {
+        $(".sales").removeClass("active");
+        $(".leader").removeClass("active");
+        $(".product").addClass("active");
+        $(".productteam").show();
+        $(".salesteam").hide();
+        $(".leaderteam").hide();
+        $(".bioinfo").remove();
+    });
+
+    $(".sales").click(function () {
+        $(".sales").addClass("active");
+        $(".leader").removeClass("active");
+        $(".product").removeClass("active");
+        $(".productteam").hide();
+        $(".salesteam").show();
+        $(".leaderteam").hide();
+        $(".bioinfo").remove();
+    });
+
+    $(".leader").click(function () {
+        $(".sales").removeClass("active");
+        $(".leader").addClass("active");
+        $(".product").removeClass("active");
+        $(".leaderteam").show();
+        $(".salesteam").hide();
+        $(".productteam").hide();
+        $(".bioinfo").remove();
+    });
+
+    $('.navbar-toggle').on("click", function () {
+        $('#pushContent').slideToggle();
+    });
+    $(window).scroll(function () {
+        $(".fade").css("opacity", 0 + $(window).scrollTop() / 250);
+    });
+    $(window).scroll(function () {
+        $("#fade").css("opacity", 1 - $(window).scrollTop() / 250);
+    });
+</script>
+<style>
+    /* Responsive Css */
+</style>

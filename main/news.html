@@ -1,0 +1,238 @@
+<div id="servicesNav" class="mainNav col-xs-12">
+
+    <div class="searchNav col-md-5 col-lg-4">
+        <a ng-href="#/home" class="img-a"><img class="img-nav" src="images/discernLogo.png" /></a>
+        <input id="main-search2" type="text" class="form-control" placeholder="Global Search">
+        <button id="submit2"><i class="fa fa-search"></i></button>
+    </div>
+    <div class="navLinks col-md-6 col-lg-7">
+        <div class="col-xs-2 navLinkDivs">
+            <a ng-href="#/overview">
+                <p class="navText">OVERVIEW</p>
+            </a>
+        </div>
+        <div class="col-xs-2 navLinkDivs">
+            <a href="#/customers">
+                <p class="navText">CUSTOMERS</p>
+            </a>
+        </div>
+        <div class="col-xs-2 navLinkDivs">
+            <a ng-href="#/partners">
+                <p class="navText">PARTNERS</p>
+            </a>
+        </div>
+
+        <div class="col-xs-2 navLinkDivs">
+            <a href="#/news">
+                <p class="navText activetab">NEWS</p>
+            </a>
+        </div>
+        <div class="col-xs-2 navLinkDivs">
+            <a href="#/about">
+                <p class="navText">ABOUT</p>
+            </a>
+        </div>
+        <div class="col-xs-2 navLinkDivs">
+            <a href="#/contact">
+                <p class="navText">CONTACT US</p>
+            </a>
+        </div>
+
+    </div>
+    <div class="col-xs-1">
+        <div class="col-xs-6"></div>
+        <div class="borderLogin col-xs-6">
+            <div id="break"></div>
+            <a id="lockA2" href="#"><span id="lock" class="fa fa-lock fa-lg" aria-hidden="true"></span>&nbsp;LOGIN</a>
+        </div>
+    </div>
+</div>
+
+<nav id="smallerNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="searchNav">
+                <a class="navbar-brand page-scroll" ng-href="#/home"><img class="img-nav" src="images/discernLogo.png" /></a>
+                <div class="navbar-collapse" id="global-search-desktop">
+                    <input id="main-search2" type="text" class="form-control" placeholder="Global Search">
+                    <button id="submit2"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div class="navbar-collapse" id="global-search-mobile">
+                        <input id="main-search2" type="text" class="form-control" placeholder="Global Search">
+                        <button id="submit2"><i class="fa fa-search"></i></button>
+                    </div>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#/overview">Overview</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#/customers">Customers</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#/partners">Partners</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#/news">News</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#/about">About</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#/contact">Contact Us</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#">Login</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<div id="pushContent"></div>
+<!-- pushing down site -->
+<!-- navbar code done -->
+<br/>
+<div style="width: 100%; height: 330px; background-image: url('images/hero_news.png');margin-top:20px;">
+    <h1 style="text-align: center; color: white; font-size: 120px; padding-top: 100px;" id="fade"><b>DISCERN NEWS</b></h1>
+</div>
+<div id="underNewsHero">
+    <h1 style="color:#116194;font-size:48px;">Check Out the Latest Buzz:</h1>
+</div>
+
+<div id="newsContainer" class="container" ng-controller="news">
+    <br/>
+    <div style="width: 90%; margin: 0 auto; background-color:#ececec">
+        <ul class="nav nav-tabs newspages nav-justified" style="border:1px solid #474747;">
+            <li id="newsTab" class="news active"><a id="newsA" ng-click="show_news()" style="border:0; font-size:18px;">News</a></li>
+            <li id="eventsTab" class="events"><a id="eventsA" ng-click="show_events()" style="border:0; font-size:18px;" class="blue">Events</a></li>
+        </ul>
+    </div>
+    <div class="row" id="news_page">
+        <div class="col-xs-4" style="overflow-y: auto; min-height: 500px; background-color: white;border-right:1px solid #474747" id="fillNews">
+            <div ng-repeat="post in current_tab" id="single_news" ng-click="change_post(post.post_id)" style="overflow-y: hidden;">
+                <div>
+                    <p style="color:#474747; font-size:16px; text-align:left; padding:20px 20px 0px;margin:0;" id="dates">{{ post.date }}:</p>
+                    <h4 class="headlines"> {{ post.title }}</h4>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-8" style="text-align: center; overflow-y: scroll;" id="currentpost">
+            <iframe id="Example2" title="Example2" width="100%" height="900px" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" ng-src="{{ trustSrc(current_story.link) }}">
+        </div>
+        </iframe>
+    </div>
+</div>
+</div>
+
+<div id="footer-contact">
+    <div class="container" style="margin: 0 auto; padding: 10px; padding-top: 40px; font-size: 20px;">
+        <div class="row">
+            <div class="col-xs-7" style="margin: 0 auto;">
+                <img src="images/whiteLogo.png" id="footer-logo" />
+                <!--<br/>
+<br/>-->
+                <br/>
+                <div style="height: 50px; float: right;">
+                    <ul class="footer-ul" style="display: inline-block">
+                        <a href="#">
+                            <li style="list-style: none; color: #F7F7F7;">REGISTER</li>
+                        </a>
+                        <a href="#">
+                            <li style="list-style: none; color: #F7F7F7;">SEARCH</li>
+                        </a>
+                        <a href="#">
+                            <li style="list-style: none; color: #F7F7F7;">TOS</li>
+                        </a>
+                    </ul>
+                    <ul style="display: inline-block; list-style: none;">
+                        <a ng-href="#/overview">
+                            <li style="list-style: none; color: #c6c6c6;">OVERVIEW</li>
+                        </a>
+                        <a ng-href="#/customers">
+                            <li style="list-style: none; color: #c6c6c6;">CUSTOMERS</li>
+                        </a>
+                        <a ng-href="#/partners">
+                            <li style="list-style: none; color: #c6c6c6;">PARTNERS</li>
+                        </a>
+                    </ul>
+                    <ul style="display: inline-block; list-style: none;">
+                        <a ng-href="#/news">
+                            <li style="list-style: none; color: #c6c6c6;">NEWS</li>
+                        </a>
+                        <a ng-href="#/about">
+                            <li style="list-style: none; color: #c6c6c6">ABOUT US</li>
+                        </a>
+                        <a ng-href="#/contact">
+                            <li style="list-style: none; color: #c6c6c6;">CONTACT US</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-xs-5" style="color: #c6c6c6;">
+                <div class="col-sm-4" style="width: 100%; ">
+                    <br/>
+                    <div style="border-left: 1px solid #c6c6c6; height: 120px;">
+                        <div class="footer-icons">
+                            <div id="break"></div>
+                            <a href="">
+                                <span class="socicon-google ficon">
+                                </span>
+                            </a>
+                            <a href="">
+                                <span class="socicon-linkedin ficon">
+                                </span>
+                            </a>
+                            <a href="">
+                                <span class="socicon-twitter ficon"></span>
+                            </a>
+                        </div>
+                        <div style="margin-left: 30px;">
+                            <h3 style="font-size:16px;margin-top:10px;">PHONE:650.336.0222</h3>
+                            <h4 style="font-size:16px;">204 E 2ND AVENUE. #210 <br>San Mateo, CA 94401</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.navbar-toggle').on("click", function () {
+        $('#pushContent').slideToggle();
+    });
+
+    $(window).scroll(function () {
+        $("#fade").css("opacity", 1 - $(window).scrollTop() / 250);
+    });
+
+    $(document).ready(function () {
+        $("iframe").prop("src", "{{posts[0].link}}");
+    })
+</script>
+<style>
+    /* Responsive Css */
+
+    @media (min-width: 992px) {
+        #servicesNav {
+            margin-top: 0px;
+        }
+    }
+</style>
